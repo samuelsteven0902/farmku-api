@@ -7,6 +7,10 @@ const DataCollection = sequelize.define('data_collection', {
     autoIncrement: true,
     primaryKey: true
   },
+  nama_varietas: {
+    type: DataTypes.STRING(255),
+    allowNull: false
+  },
   N: {
     type: DataTypes.FLOAT,
     allowNull: false
@@ -32,8 +36,8 @@ const DataCollection = sequelize.define('data_collection', {
     allowNull: false
   },
   Image: {
-    type: DataTypes.STRING(255),
-    allowNull: false
+    type: DataTypes.JSON,
+    allowNull: false,
   },
   Description: {
     type: DataTypes.TEXT,
